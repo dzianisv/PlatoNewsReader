@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+beautifulsoup4 = "*"
+requests = "*"
+html2text = "*"
+clean = "*"
+wave = "*"
+pyaudio = "*"
+urllib3 = "==1.26.6"
+tts = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
