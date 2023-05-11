@@ -45,14 +45,15 @@ def page2text(url):
 def text2speach(text: str, output: str):
     # Reference documentation https://tts.readthedocs.io/en/latest/inference.html
     # List available 🐸TTS models and choose the first one
-    model_name = TTS.list_models()[0]
+    # model_name = TTS.list_models()[0]
+    # use `tts --list_models`
+    model_name = 'tts_models/en/ljspeech/tacotron2-DDC'
     # Init TTS
     tts = TTS(model_name)
     # Text to speech to a file
     logger.debug("Available speakers: %s", tts.speakers)
     logger.debug("Available languages: %s", tts.languages)
-
-    tts.tts_to_file(text=text, speaker=tts.speakers[0], language=tts.languages[0], file_path=output)
+    tts.tts_to_file(text=text, file_path=output)
 
 
 def play_audio(wav_filename: str):
